@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "jshint": "^2.13.6"
+  },
+  "scripts": {
+    "build": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}

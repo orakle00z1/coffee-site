@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: "dana-med";
+        /* 400 */
+        src: local("dana-med"), url("../public/fonts/Dana/dana-medium.woff");
+
+    }
+
+    @font-face {
+        font-family: "dana";
+        src: local("dana"), url("../public/fonts/Dana/Dana-Regular.ttf");
+
+    }
+
+    @font-face {
+        font-family: "dana-bold";
+        /* 600 */
+        src: local("dana-bold"), url("../public/fonts/Dana/dana-bold.woff");
+    }
+
+    @font-face {
+        font-family: "dana-light";
+        /* 300 */
+        src: local("dana-light"), url("../public/fonts/Dana/dana light.woff");
+    }
+
+
+    @font-face {
+        font-family: "lili-reg2";
+        src: local("lili-reg2"), url("../public/fonts/leila/Leila-Regular2[@fontrayegan].ttf");
+    }
+
+    @font-face {
+        font-family: "lili-bold";
+        src: local("lili-bold"), url("../public/fonts/leila/Leila-Bold[@fontrayegan].ttf");
+    }
+
+
+    @font-face {
+        font-family: "lili-reg";
+        src: local("mah-med"), url("../public/fonts/leila/Leila-Regular[@fontrayegan].ttf");
+    }
+
+
+
+    @font-face {
+        font-family: "morabba-bold2";
+        src: local("morabba-bold2"), url("../public/fonts/Moraba/Morabba-Black.woff2") format("woff2");
+    }
+
+    @font-face {
+        font-family: "morabba-bold";
+        src: local("morabba-bold"), url("../public/fonts/Moraba/Morabba-Bold.woff2") format("woff2");
+    }
+
+    @font-face {
+        font-family: "morabba-medium";
+        src: local("morabba-medium"), url("../public/fonts/Moraba/Morabba-Medium.woff2") format("woff2");
+    }
+
+    @font-face {
+        font-family: "morabba-light";
+        src: local("morabba-light"), url("../public/fonts/Moraba/Morabba-Light.woff2") format("woff2");
+    }
+
+    body {
+        height: 5000px;
+    }
+
+    body::-webkit-scrollbar {
+        width: 10px;
+    }
+    
+    body::-webkit-scrollbar-track {
+        background-color: rgb(39, 39, 42);
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+
+    body::-webkit-scrollbar-thumb {
+        background-image: linear-gradient(180deg, rgba(253, 187, 116, 0.995) 0%, rgb(63, 63, 70) 99%);
+        border-radius: 6px;
+    }
+
+    #section::-webkit-scrollbar {
+        display: none;
+    }
+
+    #section {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        overflow-y: scroll;
+    }
+
+
+}
+
+@layer components{
+    .submenu{
+        @apply  flex flex-col gap-y-3 mt-3 pr-[28px] text-sm text-zinc-600 dark:text-white ;
+    }
+    /*.submenu--open{*/
+    /*    @apply  flex ;*/
+
+    /*}*/
+    .overlay{
+        @apply invisible opacity-0;
+    }
+    .overlay--visible{
+        @apply visible opacity-100;
+    }
+
+    @media  screen and (min-width: 1024px) {
+        .product{
+            background: url("../public/img/CoffeeShop-Files/body-bg.png") no-repeat ;
+            background-size: 100%;
+            height: 900px;
+
+        }
+
+        html.dark .product{
+            height: 900px;
+            background: url("../public/img/CoffeeShop-Files/body-bg.png") no-repeat;
+        }
+    }
+
+
+
+
+
+
+}
