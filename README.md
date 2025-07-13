@@ -1,1 +1,1 @@
-my first project with html js tailwindcss 
+First website using HTML, JS, and Tailwind CSS.
